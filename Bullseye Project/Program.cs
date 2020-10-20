@@ -7,6 +7,7 @@ using System.Runtime.InteropServices;
 using System.Drawing;
 using System.Threading;
 using System.IO;
+using System.Diagnostics;
 
 
 
@@ -17,12 +18,12 @@ namespace Bullseye
         static public string documentPath = @"C:/Users/neely_tristian/Desktop/Bullseye Project(UPDATED)/Bullseye Project/Bullseye Project/myData.txt";
         static void Main(string[] args)
         {
-            Console.WriteLine("Chose your dificulty easy, normal, hard");
-
-            /* RandomPos()*/
+            Console.WriteLine("Chose your dificulty easy, medium, hard, Extreme");           
             selectDif();
             EasyDif();
-            mediumDifficulty();           
+            mediumDifficulty();
+            hardDifficulty();
+            ExtremeDifficulty();
             Console.ReadLine();
         }
         
@@ -36,6 +37,14 @@ namespace Bullseye
             else if (input == "normal")
             {
                 mediumDifficulty();
+            }
+            else if(input == "hard")
+            {
+                hardDifficulty();
+            }
+            else if(input == "Extreme")
+            {
+                ExtremeDifficulty();
             }
             else
             {
@@ -176,7 +185,7 @@ namespace Bullseye
 
                 if (result == "Yes" || result == "y")
                 {
-                    normalDifficulty();
+                    selectDif();
                 }
                 else if (result == "No" || result == "n")
                 {
@@ -353,7 +362,7 @@ namespace Bullseye
 
                         if (result == "Yes" || result == "y")
                         {
-                            mediumDifficulty();
+                            selectDif();
                         }
                         else if (result == "No" || result == "n")
                         {
@@ -376,6 +385,15 @@ namespace Bullseye
 
                 }
             }
+
+        public static void hardDifficulty()
+        {
+
+        }
+        public static void ExtremeDifficulty()
+        {
+
+        }
             
 
         }
